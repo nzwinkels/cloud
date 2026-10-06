@@ -4,6 +4,28 @@ Eerste 3D-prototype voor oefenen met snowboardbochten op harde sneeuw.
 Godot **4.6.x**, standaardversie met GDScript; getest met **4.6.3**.
 Geen plugins, assetdownloads, accounts of andere dependencies nodig.
 
+## Windows-testbestand
+
+Wil je alleen spelen? Download de kant-en-klare
+[SnowboardLab.exe](https://github.com/nzwinkels/cloud/raw/refs/heads/snowboard-prototype/downloads/SnowboardLab.exe)
+uit de map `downloads` en dubbelklik erop. Deze versie is voor Windows
+10/11 x86-64 en bevat alle speldata; je hoeft Godot niet te installeren.
+De export is gebouwd met Godot 4.6.3; jouw lokaal geïnstalleerde editorversie
+heeft geen invloed op het starten van deze executable.
+
+Voor opnieuw bouwen vanuit de editor: installeer de exporttemplates die
+bij jouw Godot-versie horen, kies **Project > Export > Windows Desktop**,
+en exporteer een release met **Embed PCK** ingeschakeld. De preset neemt
+de scène en beide scripts expliciet mee. Dit is nodig omdat een preload
+alleen niet alle scriptafhankelijkheden in een scène-export opneemt.
+Op Linux met bijpassende templates kun je ook gebruiken:
+
+```bash
+./tools/export_windows.sh
+```
+
+Het resultaat staat dan in `.godot/exports/windows/SnowboardLab.exe`.
+
 ## Spelen
 
 Open `project.godot` in Godot en druk op **F6** vanuit `scenes/piste.tscn`,
